@@ -14,6 +14,6 @@ dap.configurations.cpp = {
 		program = "~/Downloads/Compressed/HL2/hl2_launcher",
 		cwd = "${workspaceFolder}",
 		stopOnEntry = false,
-		args = {},
+		args = { "-allowdebug", "-sw", "-condebug", "-console", "-toconsole" },
 	},
 }
