@@ -246,9 +246,8 @@ void CWeaponSniperRifle::Precache(void) { BaseClass::Precache(); }
 //-----------------------------------------------------------------------------
 bool CWeaponSniperRifle::Reload(void) {
   CBaseCombatCharacter *pOwner = GetOwner();
-  if (!pOwner) {
+  if (!pOwner)
     return false;
-  }
 
   if (pOwner->GetAmmoCount(m_iPrimaryAmmoType) > 0) {
     int primary =
@@ -290,9 +289,8 @@ bool CWeaponSniperRifle::Reload(void) {
 void CWeaponSniperRifle::PrimaryAttack(void) {
   // Only the player fires this way so we can cast safely.
   CBasePlayer *pPlayer = ToBasePlayer(GetOwner());
-  if (!pPlayer) {
+  if (!pPlayer)
     return;
-  }
 
   if (gpGlobals->curtime >= m_flNextPrimaryAttack) {
     // If my clip is empty (and I use clips) start reload
@@ -355,9 +353,8 @@ void CWeaponSniperRifle::SecondaryAttack(void) {
 //-----------------------------------------------------------------------------
 void CWeaponSniperRifle::Zoom(void) {
   CBasePlayer *pPlayer = ToBasePlayer(GetOwner());
-  if (!pPlayer) {
+  if (!pPlayer)
     return;
-  }
 
   if (m_nZoomLevel >= sizeof(g_nZoomFOV) / sizeof(g_nZoomFOV[0])) {
     pPlayer->ShowViewModel(true);
