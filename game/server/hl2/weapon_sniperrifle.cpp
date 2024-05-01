@@ -83,6 +83,7 @@ public:
 protected:
   float m_fNextZoom;
   int m_nZoomLevel;
+  color32 lightRed;
 };
 
 IMPLEMENT_SERVERCLASS_ST(CWeaponSniperRifle, DT_WeaponSniperRifle)
@@ -95,6 +96,7 @@ BEGIN_DATADESC(CWeaponSniperRifle)
 
 DEFINE_FIELD(m_fNextZoom, FIELD_FLOAT),
     DEFINE_FIELD(m_nZoomLevel, FIELD_INTEGER),
+    DEFINE_FIELD(lightRed, FIELD_COLOR32),
 
     END_DATADESC()
 
@@ -113,6 +115,7 @@ IMPLEMENT_ACTTABLE(CWeaponSniperRifle);
 CWeaponSniperRifle::CWeaponSniperRifle(void) {
   m_fNextZoom = gpGlobals->curtime;
   m_nZoomLevel = 0;
+  lightRed = {248, 98, 0, 32};
 
   m_bReloadsSingly = true;
 
@@ -140,6 +143,7 @@ bool CWeaponSniperRifle::Holster(CBaseCombatWeapon *pSwitchingTo) {
       pPlayer->ShowViewModel(true);
       pPlayer->SetFOV(pPlayer, 0);
       m_nZoomLevel = 0;
+      UTIL_ScreenFade(pPlayer, lightRed, 0.2f, 0, (FFADE_IN | FFADE_PURGE));
     }
   }
 
@@ -262,6 +266,7 @@ bool CWeaponSniperRifle::Reload(void) {
           pPlayer->ShowViewModel(true);
           pPlayer->SetFOV(pPlayer, 0);
           m_nZoomLevel = 0;
+          UTIL_ScreenFade(pPlayer, lightRed, 0.2f, 0, (FFADE_IN | FFADE_PURGE));
         }
       } else {
         return false;
@@ -363,6 +368,7 @@ void CWeaponSniperRifle::Zoom(void) {
     WeaponSound(SPECIAL2);
     pPlayer->SetFOV(pPlayer, 0);
     m_nZoomLevel = 0;
+    UTIL_ScreenFade(pPlayer, lightRed, 0.2f, 0, (FFADE_IN | FFADE_PURGE));
   } else {
     if (m_nZoomLevel == 0) {
       pPlayer->ShowViewModel(false);
@@ -371,6 +377,8 @@ void CWeaponSniperRifle::Zoom(void) {
     WeaponSound(SPECIAL1);
     pPlayer->SetFOV(pPlayer, g_nZoomFOV[m_nZoomLevel]);
     m_nZoomLevel++;
+    UTIL_ScreenFade(pPlayer, lightRed, 0.2f, 0,
+                    (FFADE_OUT | FFADE_PURGE | FFADE_STAYOUT));
   }
 
   m_fNextZoom = gpGlobals->curtime + SNIPER_ZOOM_RATE;
