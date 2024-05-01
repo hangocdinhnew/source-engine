@@ -80,6 +80,7 @@ def build(bld):
     source = game["sources"] + [
         "../../public/tier0/memoverride.cpp",
         "./hl2/physgun.cpp",
+        "./hl2/weapon_sniperrifle.cpp",
     ]
     includes += game["includes"]
     defines = game["defines"]
