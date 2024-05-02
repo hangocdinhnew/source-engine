@@ -441,9 +441,8 @@ void CWeaponBinoculars::SecondaryAttack(void) {
 //-----------------------------------------------------------------------------
 void CWeaponBinoculars::Zoom(ZoomMode_t eMode) {
   CBasePlayer *pPlayer = ToBasePlayer(GetOwner());
-  if (!pPlayer) {
+  if (!pPlayer)
     return;
-  }
 
   switch (eMode) {
   //
