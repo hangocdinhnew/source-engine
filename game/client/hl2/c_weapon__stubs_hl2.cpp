@@ -42,6 +42,7 @@ STUB_WEAPON_CLASS(weapon_slam, Weapon_SLAM, C_BaseHLCombatWeapon);
 STUB_WEAPON_CLASS(weapon_crowbar, WeaponCrowbar, C_BaseHLBludgeonWeapon);
 
 STUB_WEAPON_CLASS(weapon_sniperrifle, WeaponSniperRifle, C_BaseHLCombatWeapon);
+STUB_WEAPON_CLASS(weapon_cguard, WeaponCGuard, C_BaseHLCombatWeapon);
 
 #ifdef HL2_EPISODIC
 STUB_WEAPON_CLASS(weapon_hopwire, WeaponHopwire, C_BaseHLCombatWeapon);
