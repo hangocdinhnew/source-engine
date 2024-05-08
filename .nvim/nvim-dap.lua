@@ -14,6 +14,6 @@ dap.configurations.cpp = {
 		program = "/home/hangocdinh/Downloads/Compressed/HL2/hl2_launcher",
 		cwd = "/home/hangocdinh/Downloads/Compressed/HL2",
 		stopOnEntry = false,
-		args = { "-allowdebug", "-sw", "-condebug", "-console", "-toconsole" },
+		args = { "-allowdebug", "-sw", "-condebug", "-console", "-toconsole", "-fullscreen", "-h 1920", "-w 1820" },
 	},
 }
