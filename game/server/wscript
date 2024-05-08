@@ -82,6 +82,7 @@ def build(bld):
         "./hl2/physgun.cpp",
         "./hl2/weapon_sniperrifle.cpp",
         "./hl2/weapon_binoculars.cpp",
+        "./hl2/func_function.cpp",
     ]
     includes += game["includes"]
     defines = game["defines"]
