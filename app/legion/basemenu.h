@@ -1,6 +1,6 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
 //
-// Purpose: Base class menus should all inherit from 
+// Purpose: Base class menus should all inherit from
 //
 // $Revision: $
 // $NoKeywords: $
@@ -13,27 +13,24 @@
 #pragma once
 #endif
 
-#include "vgui_controls/frame.h"
 #include "vgui/keycode.h"
-
+#include "vgui_controls/frame.h"
 
 //-----------------------------------------------------------------------------
 // Constructor, destructor
 //-----------------------------------------------------------------------------
-class CBaseMenu : public vgui::Frame
-{
-	DECLARE_CLASS_SIMPLE( CBaseMenu, vgui::Frame );
+class CBaseMenu : public vgui::Frame {
+  DECLARE_CLASS_SIMPLE(CBaseMenu, vgui::Frame);
 
 public:
-	CBaseMenu( vgui::Panel *pParent, const char *pPanelName );
-	virtual ~CBaseMenu();
+  CBaseMenu(vgui::Panel *pParent, const char *pPanelName);
+  virtual ~CBaseMenu();
 
-	// Commands
-	virtual void OnCommand( const char *pCommand );
-	virtual void OnKeyCodeTyped( vgui::KeyCode code );
+  // Commands
+  virtual void OnCommand(const char *pCommand);
+  virtual void OnKeyCodeTyped(vgui::KeyCode code);
 
 private:
 };
 
 #endif // BASEMENU_H
-
