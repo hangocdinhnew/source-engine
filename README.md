@@ -49,4 +49,4 @@ XMR: `48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6Ez
 
 # Notes.
 
-This is a template branch of this particular fork, for... template.
+This is the main branch where I add modifications to the code.
