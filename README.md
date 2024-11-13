@@ -48,5 +48,4 @@ ETH: `0x5d0D561146Ed758D266E59B56e85Af0b03ABAF46`
 XMR: `48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJ`
 
 # Notes.
-
 This is the main branch where I add modifications to the code.
