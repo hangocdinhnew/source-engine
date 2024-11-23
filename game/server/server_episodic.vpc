@@ -282,6 +282,7 @@ $Project "Server (Episodic)"
 			$File	"hl2\func_bulletshield.cpp"
 			$File	"hl2\func_bulletshield.h"
 			$File	"episodic\npc_puppet.cpp"
+      $File "weapon_physgun.cpp"
 
 
 			$Folder	"unused"

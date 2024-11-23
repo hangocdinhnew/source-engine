@@ -125,6 +125,7 @@ $Project "Client (Episodic)"
 			$File	"hl2\shieldproxy.cpp"
 			$File	"$SRCDIR\game\shared\hl2\survival_gamerules.cpp"
 			$File	"hl2\vgui_rootpanel_hl2.cpp"
+      $File "c_weapon_physgun.cpp"
 			$File	"episodic\c_npc_puppet.cpp"
 		}
 	}
